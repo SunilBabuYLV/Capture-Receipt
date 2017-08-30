@@ -10,7 +10,11 @@ namespace ReceiptCapture
             {
                 var obj = new ImageScannerService();
                 var resultText = obj.ScanImageForDescription();
-                Console.WriteLine(resultText);
+                var analyzer=new TextAnalyzer();
+                var result=analyzer.Analize(resultText);
+                Console.WriteLine(result.IsValid);
+                Console.WriteLine($"Date : {result.TransactionDate}");
+                Console.WriteLine($"Time :{result.Amount}");
 
                 Console.WriteLine("Task Completed......");
                 
