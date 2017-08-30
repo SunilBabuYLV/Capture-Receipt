@@ -14,7 +14,7 @@ namespace ReceiptCapture
                 var result=analyzer.Analize(resultText);
                 Console.WriteLine(result.IsValid);
                 Console.WriteLine($"Date : {result.TransactionDate}");
-                Console.WriteLine($"Time :{result.Amount}");
+                Console.WriteLine($"Amount :{result.Amount}");
 
                 Console.WriteLine("Task Completed......");
                 
